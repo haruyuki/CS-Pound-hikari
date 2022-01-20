@@ -10,6 +10,8 @@ All updates and changes made to this bot will be documented here.
 
 ---
 
+## [0.0.2] - 20/01/2022
+- Changed structure of files
+
 ## [0.0.1] - 28/10/2021
-### Added
-- Bot creation
+- Created the bot

@@ -1,21 +1,13 @@
-import asyncio
-from pathlib import Path
-import logging
-import os
-import uvloop
-
-from dotenv import load_dotenv
-
 import hikari
 import tanjun
-
-from cspound import GUILD_ID, __version__
-
-from .client import Client
-
-load_dotenv()
+import os
+import uvloop
+from pathlib import Path
+import logging
 
 logger = logging.getLogger("cspound.main")
+
+uvloop.install()
 
 
 class Bot(hikari.GatewayBot):
@@ -25,9 +17,11 @@ class Bot(hikari.GatewayBot):
         )
 
     def create_client(self) -> None:
-        self.client = Client.from_gateway_bot(self, declare_global_commands=GUILD_ID)
-        self.client.load_modules()
-        self.client.add_prefix("?")
+        self.client = tanjun.Client.from_gateway_bot(
+            self, declare_global_commands=409642350600781824
+        )
+        self.client.load_modules(*Path("./commands").glob("*.py"))
+        self.client.add_prefix(",")
 
     def run(self: hikari.GatewayBot) -> None:
         self.create_client()
@@ -39,7 +33,6 @@ class Bot(hikari.GatewayBot):
         super().run()
 
     async def on_starting(self, event: hikari.StartingEvent) -> None:
-        await self.client.open()
         logger.info("Bot is starting...")
 
     async def on_started(self, event: hikari.StartedEvent) -> None:
@@ -53,4 +46,5 @@ class Bot(hikari.GatewayBot):
         logger.info("Bot has been shut down.")
 
 
-# bot.remove_command("help")
+bot = Bot()
+bot.run()

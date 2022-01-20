@@ -1,4 +1,4 @@
-hikari == 2.0.0.dev103
-hikari-tanjun == 2.1.2a1
+hikari[speedups]
+hikari-tanjun
 python-dotenv
 uvloop
