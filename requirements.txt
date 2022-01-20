@@ -1,3 +1,4 @@
 hikari[speedups]
 hikari-tanjun
+lxml
 uvloop
