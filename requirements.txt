@@ -1,4 +1,3 @@
 hikari[speedups]
 hikari-tanjun
-python-dotenv
 uvloop
