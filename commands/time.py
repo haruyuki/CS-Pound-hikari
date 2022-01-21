@@ -7,7 +7,7 @@ component = tanjun.Component()
 
 @component.with_slash_command
 @tanjun.as_slash_command(
-    "time", "Show when the next opening is", default_to_ephemeral=False
+    "time", "Show when the next opening is", defaults_to_ephemeral=False
 )
 async def time(ctx: tanjun.abc.Context) -> None:
     data = await cs.get_pound_string()
