@@ -1,0 +1,215 @@
+{
+  "warning": {
+    "icon": "pencil",
+    "description": "To know about command usage or examples, use: ,help <command>"
+  },
+
+  "categories": {
+    "Chicken Smoothie": {
+      "icon": "dog",
+      "commands": {
+      	"Announcement": {
+          "usage": ",announcement <on | off | latest>",
+          "description": "Allows you to opt in a channel to automatically post new announcements on Chicken Smoothie, or to just show the latest announcement.",
+          "examples": {
+            "1": ",announcement on",
+            "2": ",announce off",
+            "3": ",news latest"
+          },
+          "aliases": {
+          	"1": ",announce",
+          	"2": ",news"
+          }
+        },
+
+      	"Identify": {
+          "usage": ",identify <Pet Link | Static Image link>",
+          "description": "Identifies the archive page where the pet or item you provided is located at. This command won't work for pets with items.",
+          "examples": {
+            "1": ",identify https://www.chickensmoothie.com/viewpet.php?id=149733321",
+            "2": ",id https://static.chickensmoothie.com/item/5270&p=19098.jpg",
+            "3": ",id https://static.chickensmoothie.com/pic.php?k=CAD0977E70396057F7A7A78771A16FEC&bg=e6ebf2"
+          },
+          "aliases": {
+          	"1": ",id"
+          }
+        },
+
+        "Image": {
+          "usage": ",image <link>",
+          "description": "Displays an image of how you would see the pet in your 'My Pets' groups.",
+          "examples": {
+            "1": ",image https://www.chickensmoothie.com/viewpet.php?id=11214536",
+            "2": ",image https://www.chickensmoothie.com/viewpet.php?id=11818645",
+            "3": ",image https://www.chickensmoothie.com/viewpet.php?id=18249055"
+          },
+          "aliases": {
+            "1": ",img"
+          }
+        },
+
+        "Pet": {
+          "usage": ",pet <link>",
+          "description": "Displays information about the pet. Unlike the image command, this command shows all available information about the pet, such as ID, age, and who it's given by.",
+          "examples": {
+            "1": ",pet http://www.chickensmoothie.com/viewpet.php?id=54685939",
+            "2": ",pet https://www.chickensmoothie.com/viewpet.php?id=2957856",
+            "3": ",pet https://www.chickensmoothie.com/viewpet.php?id=3539003"
+          },
+          "aliases": {}
+        },
+
+        "Time": {
+          "usage": ",time",
+          "description": "Tells you how long is left before the pound opens.",
+          "examples": {},
+          "aliases": {
+            "1": ",pound"
+          }
+        }
+      }
+    },
+
+    "General": {
+      "icon": "file_folder",
+      "commands": {
+        "Auto Remind": {
+          "usage": ",autoremind <time/off>",
+          "description": "Allows you to set an Auto Remind to ping you at a time you set before the pound opens. The furthest you can set an Auto Remind for at the moment is 60 minutes.",
+          "examples": {
+            "1": ",autoremind 5m",
+            "2": ",autoremind 60m",
+            "3": ",autoremind off"
+          },
+          "aliases": {}
+        },
+
+        "RemindMe": {
+          "usage": ",remindme <time>",
+          "description": "Pings you after a specified amount of time that you set. The maximum reminding time allowed is 24 hours.",
+          "examples": {
+            "1": ",remindme 1h6m23s",
+            "2": ",remindme 12m",
+            "3": ",remindme 1h10s"
+          },
+          "aliases": {
+            "1": ",rm"
+          }
+        }
+      }
+    },
+
+    "Informational": {
+      "icon": "wrench",
+      "commands": {
+        "CS": {
+          "usage": ",cs <amount>",
+          "description": "Calculates the exchange rate for Flight Rising gems and treasure given the amount of C$",
+          "examples": {
+            "1": ",cs 1",
+            "2": ",cs 326",
+            "3": ",cs 1257"
+          },
+          "aliases": {}
+        },
+
+        "Help": {
+          "usage": ",help <command> [public]",
+          "description": "Gives you information on usage and examples of a command. If no command is provided, it will send you the command list with general descriptions of each command. Adding 'public' to the end of the command will send the message to the channel rather than through PM",
+          "examples": {
+            "1": ",help public",
+            "2": ",help autoremind",
+            "3": ",help remindme public"
+          },
+          "aliases": {}
+        },
+
+        "Gems": {
+          "usage": ",gems <amount>",
+          "description": "Calculates the exchange rate for Chicken Smoothie C$ and treasure given the amount of gems",
+          "examples": {
+            "1": ",gems 24",
+            "2": ",gems 158",
+            "3": ",gems 527"
+          },
+          "aliases": {
+            "1": ",fr"
+          }
+        },
+
+        "Invite": {
+          "usage": ",invite",
+          "description": "PM's you the website to get the bot invite link",
+          "examples": {
+            "1": ",invite"
+          },
+          "aliases": {}
+        },
+
+        "Progeny": {
+          "usage": ",progeny <dragon1> <dragon2> <multiplier>",
+          "description": "Feel like seeing only 4 offspring at once isn't enough? Increase the multiplier up to 10 times to see be able to see a maximum of 40 offspring outcomes! Dragon1 and dragon2 can either be links or ID's or a mix of them",
+          "examples": {
+            "1": ",progeny http://flightrising.com/main.php?p=lair&id=430187&tab=dragon&did=52627778 http://flightrising.com/main.php?p=lair&id=430187&tab=dragon&did=52638150 10",
+            "2": ",progeny 52133221 47924166 3",
+            "3": ",progeny 52548928 http://flightrising.com/main.php?p=lair&id=430187&tab=dragon&did=52515035"
+          },
+          "aliases": {
+            "1": ",prog"
+          }
+        },
+
+        "Statistics": {
+          "usage": ",statistics",
+          "description": "Displays information about the system and the bot. Useful to see the current version of the bot or how many servers/users are using this bot",
+          "examples": {},
+          "aliases": {
+            "1": ",stats"
+          }
+        },
+
+        "Support": {
+          "usage": ",support",
+          "description": "PM's you a link to the CS Pound Development Server",
+          "examples": {
+            "1": ",support"
+          },
+          "aliases": {}
+        },
+
+        "Treasure": {
+          "usage": ",treasure <amount>",
+          "description": "Calculates the exchange rate for Chicken Smoothie C$ and gems given the amount of treasure",
+          "examples": {
+            "1": ",treasure 1",
+            "2": ",treasure 326",
+            "3": ",treasure 1257"
+          },
+          "aliases": {
+            "1": ",tr"
+          }
+        }
+      }
+    },
+
+    "Other": {
+      "icon": "game_die",
+      "commands": {
+
+        "Giveaway": {
+          "usage": ",giveaway <time> [winners] <description>",
+          "description": "Allows you to setup and create a giveaway for a specified time. If a pet link is provided a image of the pet is displayed.",
+          "examples": {
+            "1": ",giveaway 3h Just a normal giveaway with one winner",
+            "2": ",giveaway 1d 2w A two winner giveaway that gives away something!",
+            "3": ",giveaway 10m 5w 10 pets from my non-existent group."
+          },
+          "aliases": {
+            "1": ",g",
+            "2": ",gstart"
+          }
+        }
+      }
+    }
+  }
+}
