@@ -5,7 +5,6 @@ import chickensmoothie as cs
 component = tanjun.Component()
 
 
-@component.with_slash_command
 @tanjun.as_slash_command(
     "time", "Show when the next opening is", default_to_ephemeral=False
 )
