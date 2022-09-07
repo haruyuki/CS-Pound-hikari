@@ -1,3 +1,4 @@
+deta
 hikari[speedups]
 hikari-tanjun
 lxml
